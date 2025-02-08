@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../components/InputField";
+import Button from "../../components/Button";
 
 const SignUp = () => {
   const [userName, setUserName] = useState("");
@@ -176,12 +177,7 @@ const SignUp = () => {
               text={"confirm password"}
             />
 
-          <button
-            type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors cursor-pointer mt-7"
-          >
-            Sign Up
-          </button>
+          <Button text={"Sign Up"} />
         </form>
 
         <p

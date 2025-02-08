@@ -1,53 +1,55 @@
-import React,{useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import InputField from "../../components/InputField";
+import Button from "../../components/Button";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password,setPassword] = useState("");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
 
-  const Navigate = useNavigate()
-
+  const Navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email: ", email); 
+    console.log("UserName: ", userName);
     console.log("Password: ", password);
-    setEmail("");
+    setUserName("");
     setPassword("");
-  }
-  
+  };
+
   return (
     <>
-      <form action="login" onSubmit={(e)=>handleSubmit(e)}>
-        <div>
-          <label htmlFor="email"> Email</label>
-          <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          placeholder="Enter Your Email"
-          value={email}
-          onChange={(e)=>setEmail(e.target.value)}
-          />
+      <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="w-96 p-6 py-15 rounded-lg shadow-lg bg-white">
+          <form
+            action="login"
+            onSubmit={(e) => handleSubmit(e)}
+            className="space-y-4"
+          >
+            <h2 className="text-center font-bold text-3xl mb-10">Login </h2>
+            <InputField
+              type="text"
+              id="username"
+              name="username"
+              value={userName}
+              setValue={setUserName}
+              text="Username"
+            />
+            <InputField
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              setValue={setPassword}
+              text="Password"
+            />
+            <Button text="Login" />
+          </form>
+          <p onClick={(e) => Navigate("/signup")} className="mt-4 text-center text-blue-600 cursor-pointer hover:underline">Don't have an account? Sign up now</p>
         </div>
-        <div>
-          <label htmlFor="password"> Password</label>
-          <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          placeholder="Enter Your Password"
-          value={password}
-          onChange={(e)=>setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-      </form>
-      <p onClick={(e)=>Navigate('/signup')}>Sign Up Now</p>
+      </div>
     </>
   );
-}
+};
 
-export default Login
+export default Login;
