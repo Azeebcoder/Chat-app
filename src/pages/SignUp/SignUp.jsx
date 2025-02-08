@@ -159,7 +159,6 @@ const SignUp = () => {
           </div>
 
           {/* Password */}
-          <div className="grid grid-cols-2 gap-4">
             <InputField
               type={"password"}
               id={"password"}
@@ -176,7 +175,6 @@ const SignUp = () => {
               setValue={setConfirmPassword}
               text={"confirm password"}
             />
-          </div>
 
           <button
             type="submit"
