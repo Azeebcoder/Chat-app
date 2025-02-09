@@ -8,7 +8,8 @@ const SearchOverlay = ({handleCloseSearch}) => {
           {/* Close Button */}
           <button
             onClick={handleCloseSearch}
-            className="absolute top-[-40%] right-0 text-white text-2xl hover:text-red-500 cursor-pointer font-bold"
+            className="absolute top-[-40%] right-0 text-white text-2xl hover:text-red-500 cursor-pointer font-bold
+            "
           >
             ✕
           </button>
