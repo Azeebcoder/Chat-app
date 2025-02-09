@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputField from "../../components/InputField";
 import Button from "../../components/Button";
 
@@ -27,7 +27,6 @@ const SignUp = () => {
     fileInputRef.current.click();
   };
 
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -180,12 +179,7 @@ const SignUp = () => {
           <Button text={"Sign Up"} />
         </form>
 
-        <p
-          className="mt-4 text-center text-blue-600 cursor-pointer hover:underline"
-          onClick={() => navigate("/login")}
-        >
-          Already have an account? Login Now
-        </p>
+        <Link to={"/login"} className="flex items-center justify-center pt-4 text-center text-blue-600 cursor-pointer hover:underline">Already have an accout? Login here</Link>
       </div>
     </div>
   );

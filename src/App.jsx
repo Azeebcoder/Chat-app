@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppLayout from "./layout/AppLayout.jsx";
 
 // Pages with lazy loding
 
@@ -15,8 +16,10 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/" element={<AppLayout />} >
+          <Route index element={<Home />} />
+          <Route path="chat" element={<Chat />} />
+          </Route>
           <Route path="/group" element={<Group />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />

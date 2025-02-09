@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputField from "../../components/InputField";
 import Button from "../../components/Button";
 
@@ -7,7 +7,6 @@ const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const Navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,7 +44,7 @@ const Login = () => {
             />
             <Button text="Login" />
           </form>
-          <p onClick={(e) => Navigate("/signup")} className="mt-4 text-center text-blue-600 cursor-pointer hover:underline">Don't have an account? Sign up now</p>
+          <Link to={"/signup"} className="flex items-center justify-center pt-4 text-center text-blue-600 cursor-pointer hover:underline">Don't have an account? Sign up now</Link>
         </div>
       </div>
     </>
