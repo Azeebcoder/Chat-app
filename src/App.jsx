@@ -16,9 +16,9 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AppLayout />} >
-          <Route index element={<Home />} />
-          <Route path="chat" element={<Chat />} />
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Home />} />
+            <Route path="chat/:chatid" element={<Chat />} />
           </Route>
           <Route path="/group" element={<Group />} />
           <Route path="/login" element={<Login />} />

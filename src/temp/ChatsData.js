@@ -1,0 +1,53 @@
+const chats = [
+  {
+    chatId: "chat_001",
+    name: "Anshul",
+    participants: ["user_101", "user_102"],
+    isGroupChat: false,
+    groupName: null,
+    groupPicture: null,
+    messageContent: "Hey! How's it going?",
+    timestamp: "2025-02-10T10:30:00Z",
+    unreadCount: 2,
+    lastUpdated: "2025-02-10T10:30:00Z",
+  },
+  {
+    chatId: "chat_002",
+    name: "Vishal",
+    participants: ["user_101", "user_105"],
+    isGroupChat: false,
+    groupName: null,
+    groupPicture: null,
+    messageContent: "Got the files. Thanks!",
+    timestamp: "2025-02-08T14:45:00Z",
+    unreadCount: 0,
+    lastUpdated: "2025-02-08T14:45:00Z",
+  },
+  {
+    chatId: "chat_003",
+    name: "Damodar Das Narendra Modi",
+    participants: ["user_103", "user_104"],
+    isGroupChat: false,
+    groupName: null,
+    groupPicture: null,
+    messageContent: "Let's meet tomorrow at 5 PM.",
+    timestamp: "2025-02-09T08:15:00Z",
+    unreadCount: 1,
+    lastUpdated: "2025-02-09T08:15:00Z",
+  },
+  
+  {
+    chatId: "chat_010",
+    name: "Karan",
+    participants: ["user_111", "user_112"],
+    isGroupChat: false,
+    groupName: null,
+    groupPicture: null,
+    messageContent: "I received the payment, thanks!",
+    timestamp: "2025-02-01T17:30:00Z",
+    unreadCount: 0,
+    lastUpdated: "2025-02-01T17:30:00Z",
+  },
+];
+
+export default chats;

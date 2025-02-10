@@ -15,7 +15,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <nav className="w-full bg-gray-700 px-6 py-4 text-white font-bold">
+      <nav className="w-full bg-gray-700 px-4 md:px-10 py-4 text-white font-bold">
         <div className="flex justify-between items-center">
           <span className="text-lg">Sumyy Chat</span>
           {/* Mobile Menu Toggle */}
